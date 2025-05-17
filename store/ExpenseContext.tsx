@@ -24,20 +24,21 @@ const DUMMY_DATA = [
 export const ExpenseContext = createContext({
     expenses : [],
     addExpense:({amount, description, date}:{amount:any, description:any, date:any})=>{},
-    removeExpense:(id:any)=>{},
-    updateExpense:(id:any, {amount, description, date}:{amount:any, description:any, date:any})=>{}
+    removeExpense:(_id:any)=>{},
+    updateExpense:(_id:any, {amount, description, date}:{amount:any, description:any, date:any})=>{}
 });
 
 
 function expenseReducer(state:any, action:any){
     switch(action.type){
         case 'add':
-            const id = new Date().toString() + Math.random().toString();
-            return [{...action.payload, id:id},...state]
+            const _id = new Date().toString() + Math.random().toString();
+            return [{...action.payload, _id:_id},...state]
         case 'delete':
-            return state.filter((data:any)=>data.id != action.payload)
+            const updatedState =  state.filter((data:any)=>data._id != action.payload)
+            return updatedState
         case 'update':
-            const updatableExpenseIndex = state.findIndex((expense:any)=>{expense.id == action.payload.id});
+            const  updatableExpenseIndex = state.findIndex((expense:any)=>expense._id == action.payload._id);
             const updatableExpense = state[updatableExpenseIndex];
             const updatedItem = {...updatableExpense, ...action.payload.data}
             const updatedExpenses = [...state];
@@ -56,11 +57,11 @@ function ExpensesContextProvider({children}:{children:any}){
     function addExpense({ amount, description, date }: { amount: any; description: any; date: any }) {
         dispatch({ type: 'add', payload: { amount, description, date } });
     }
-    function delExpense(id : any){
-        dispatch({type: 'delete', payload : id })
+    function delExpense(_id : any){
+        dispatch({type: 'delete', payload : _id })
     }
-     function updateExpense(id : any, expenseData:any ){
-        dispatch({type: 'update', payload : {id, data : expenseData} })
+     function updateExpense(_id : any, expenseData:any ){
+        dispatch({type: 'update', payload : {_id, data : expenseData} })
     }
 
     const value = {
