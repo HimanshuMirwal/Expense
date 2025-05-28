@@ -1,50 +1,69 @@
-# Welcome to your Expo app 👋
+# 💸 Expense Tracker App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A **React Native + Expo** app to track your expenses — built **without a database**, purely for **learning and practice** purposes.
 
-## Get started
+![React Native](https://img.shields.io/badge/React%20Native-v0.73-blue?logo=react) ![Expo](https://img.shields.io/badge/Expo-Go-brightgreen?logo=expo) ![Status](https://img.shields.io/badge/Status-Under%20Development-orange)
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## ✨ Features
 
-2. Start the app
+- 📥 **Add Expenses** — Add new expenses with title, amount, and date.
+- 📊 **Recent Overview** — View all expenses from the **last 7 days**.
+- 🧪 **Practice-Ready** — Clean and beginner-friendly codebase.
+- 💾 **No Database** — Everything is stored in memory (for learning purposes).
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🛠️ Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+| Technology | Description |
+|------------|-------------|
+| [React Native](https://reactnative.dev/) | UI framework for building native apps |
+| [Expo](https://expo.dev/) | Toolchain to streamline RN development |
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🚀 Getting Started
 
-When you're ready, run:
+### 1. Clone the Repository
 
-```bash
-npm run reset-project
-```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+git clone https://github.com/HimanshuMirwal/Expense.git
+cd Expense
 
-## Learn more
 
-To learn more about developing your project with Expo, look at the following resources:
+### 2. Install Dependencies
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+npm install
 
-## Join the community
+### 3. Run the App
 
-Join our community of developers creating universal apps.
+npm start
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Use the Expo Go app on your mobile device to scan the QR code and run the app live.
+
+📱 Screenshots
+
+ ![image](https://github.com/user-attachments/assets/ee00fafe-1d07-41e5-a8fb-c758e42450c1) 
+
+ ![image](https://github.com/user-attachments/assets/30abe2e3-95ea-4a89-8c4b-adee3652d24a) 
+
+ ![image](https://github.com/user-attachments/assets/c66dd20a-b9c0-49cb-a3f5-339ab64d3585)
+
+
+📌 Notes
+This project does not use any backend or persistent storage.
+
+Data will reset every time the app is restarted.
+
+Made for personal practice while learning React Native.
+
+🤝 Contributing
+This is a learning project, but feel free to fork it and experiment!
+
+🧑‍💻 Author
+Himanshu Mirwal
+📫 @HimanshuMirwal
+
+
